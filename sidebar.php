@@ -24,7 +24,7 @@ require_once 'config.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Management System</title>
-
+    
     <!-- Box Icons  -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <!-- Styles  -->
@@ -98,7 +98,7 @@ require_once 'config.php';
             <li>
                 <div class="title">
                     <a href="subjects.php" class="link">
-                        <i class='bx bx-line-chart'></i>
+                        <i class='bx bx-spreadsheet'></i>
                         <span class="name">Enrolled Subjects</span>
                     </a>
                     <!-- <i class='bx bxs-chevron-down'></i> -->
@@ -145,7 +145,7 @@ require_once 'config.php';
             <li>
                 <div class="title">
                     <a href="enrollment.php" class="link">
-                        <i class='bx bx-compass'></i>
+                        <i class='bx bx-edit'></i>
                         <span class="name">Enrollment</span>
                     </a>
                     <!-- <i class='bx bxs-chevron-down'></i> -->
@@ -160,7 +160,7 @@ require_once 'config.php';
             <li>
                 <div class="title">
                     <a href="profile.php" class="link">
-                        <i class='bx bx-history'></i>
+                        <i class='bx bx-user-circle'></i>
                         <span class="name">Profile</span>
                     </a>
                     <!-- <i class='bx bxs-chevron-down'></i> -->
@@ -190,7 +190,7 @@ require_once 'config.php';
             <li>
                 <div class="title">
                     <a href="logout.php" class="link">
-                        <i class='bx bx-cog'></i>
+                        <i class='bx bx-exit'></i>
                         <span class="name">Logout</span>
                     </a>
                     <!-- <i class='bx bxs-chevron-down'></i> -->

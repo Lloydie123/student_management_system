@@ -12,9 +12,21 @@
             <div class="text">Student Grades
 
                 <!-- Grades section here  -->
-
+            
             </div>
-        </div>
+         
+        </div><style>
+.rectangle {
+  height: 100px;
+  width: 100%;
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+
+<h2>Rectangle CSS</h2>
+<div class="rectangle"></div>
     </section>
 
     <!-- Link JS -->

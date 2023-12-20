@@ -10,7 +10,7 @@
         <div class="toggle-sidebar">
             <i class='bx bx-menu'></i>
             <div class="text">Settings
-                <!--Settings  here  -->
+                <!-- Settings  here  -->
 
             </div>
         </div>
