@@ -25,6 +25,10 @@
            
         </div>
 
+        <div class="text-label" >
+            <h2> Profile </h2>
+        </div>
+        
         <div class="text">
 
         <!-- Student Profile here  -->
