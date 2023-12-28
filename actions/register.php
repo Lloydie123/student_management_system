@@ -15,9 +15,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Validate input here 
     if (empty($lrn) || empty($email) || empty($contact_number) || empty($password) || empty($confirm_password)) {
+        
         $error = "All fields are required";
+        header("Location: ../register.php");
     } elseif ($password !== $confirm_password) {
         $error = "Passwords do not match";
+        header("Location: ../register.php");
     } else {
         // Hash the password (you should use a secure hashing method)
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);

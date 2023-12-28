@@ -5,7 +5,7 @@ require_once '../config.php';
 function detectLoginError($user, $password) {
     if (!$user) {
         // No account with that email
-        $_SESSION['error'] = "Account not found based on the email";
+        $_SESSION['error'] = "Account not found based on the email or lrn";
     } elseif (!password_verify($password, $user['password'])) {
         // Incorrect password
         $_SESSION['error'] = "Incorrect password";
