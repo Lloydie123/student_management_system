@@ -20,7 +20,7 @@ $(document).ready(function() {
         $.ajax({
             
             type: "POST",
-            url: "actions/check_email.php", // Replace with the actual path to your server-side script
+            url: "actions/check_account.php", // Replace with the actual path to your server-side script
             data: { email: email },
             success: function(response) {
                 var data = JSON.parse(response);
@@ -40,7 +40,7 @@ $(document).ready(function() {
         $.ajax({
             
             type: "POST",
-            url: "actions/check_lrn.php", // Replace with the actual path to your server-side script
+            url: "actions/check_account.php", // Replace with the actual path to your server-side script
             data: { lrn: lrn },
             success: function(response) {
                 var data = JSON.parse(response);
@@ -61,7 +61,7 @@ $(document).ready(function() {
         // Make an AJAX request to your server-side script
         $.ajax({    
             type: "POST",
-            url: "actions/check_lrn.php", // Replace with the actual path to your server-side script
+            url: "actions/check_account.php", // Replace with the actual path to your server-side script
             data: { contact_number: contact_number },
             success: function(response) {
                 var data = JSON.parse(response);
@@ -121,13 +121,16 @@ $(document).ready(function() {
         if ($("#email-error").text() !== "Email is available to use" || $("#lrn-error").text() !== "LRN is available to use" || $("#contact_number-error").text() !== "Contact Number is available to use") {
             // Prevent form submission if there are errors
             event.preventDefault();
-
-            // Pop up an alert , call the alert like in the login 
-            alert("Please fix the errors before submitting the form.");
-        }
-    });
+              // Configure the alert message here
+                Swal.fire({
+                    icon: 'error', // 
+                    title: 'Oops...',
+                    text: "Please fix the errors before submitting the form.",
+                });
+            }
+        });
     
-});
+    });
 </script>
 
     

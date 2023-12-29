@@ -26,7 +26,7 @@ require_once '../config.php';
         // Prepare and execute a query to check if the email already exists
         $stmt = $pdo->prepare("SELECT COUNT(*) FROM users WHERE contact_number = ?");
         $stmt->execute([$contact_number]);
-        $count = $stmt->fetchColumn();
+        $count = $stmt->fetchColumn();  
     
         if ($count > 0) {
             // LRN already exists
@@ -36,7 +36,27 @@ require_once '../config.php';
             echo json_encode(['status' => 'does_not_exist']);
         }
   
-    } else {
+    
+    } elseif(isset($_POST['email'])) {
+        // Get the lrn from the AJAX request
+        $email = $_POST['email'];
+
+        // Prepare and execute a query to check if the email already exists
+        $stmt = $pdo->prepare("SELECT COUNT(*) FROM users WHERE email = ?");
+        $stmt->execute([$email]);
+        $count = $stmt->fetchColumn();
+
+        if ($count > 0) {
+            // LRN already exists
+            echo json_encode(['status' => 'exists']);
+        } else {
+            // LRN does not exist
+            echo json_encode(['status' => 'does_not_exist']);
+        }
+
+    }
+    
+    else {
         // Handle invalid or missing parameters
         echo 'error';
     }
